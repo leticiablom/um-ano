@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { type Moment } from "../data/moments";
 
-// Importar as imagens da pasta assets
 import academia from "../assets/academia.jpg";
 import aniverAlicia from "../assets/aniver-alicia.jpg";
-import anoNovo from "../assets/ano-novo.jpg";
 import anoNovo2 from "../assets/ano-novo2.jpg";
 import carnaval from "../assets/carnaval.jpg";
 import carnaval2 from "../assets/carnaval2.jpg";
@@ -12,12 +10,12 @@ import carnaval3 from "../assets/carnaval3.jpg";
 import carnaval4 from "../assets/carnaval4.jpg";
 import casamento from "../assets/casamento.jpg";
 import chevette from "../assets/chevette.jpg";
-import datePallets from "../assets/date-pallets.jpg";
 import deitadinhos from "../assets/deitadinhos.jpg";
 import fly from "../assets/fly.jpg";
 import fofos from "../assets/fofos.jpg";
 import fofos2 from "../assets/fofos2.jpg";
-import fotoCasaDede from "../assets/foto-casa-dede.jpg";
+import cridance from "../assets/cridance.jpg";
+import quarta from "../assets/quarta.jpg";
 import imgWhatsapp from "../assets/IMG-20241003-WA0097.jpg";
 import lavras from "../assets/lavras.jpg";
 import ligacaoComVc from "../assets/ligação-com-vc.jpg";
@@ -33,12 +31,12 @@ import suaCasa from "../assets/sua-casa.jpg";
 import uber from "../assets/uber.jpg";
 import viagemLavras from "../assets/viagem-lavras.jpg";
 
-const textoInicial  = 'meu amorzinho, a um ano, a gente começou a namorar, mas são tantos e tantos momentos lindos que a gente vive juntos todos os dias'
+const textoInicial  = 'meu amorzinho, a um ano, a gente começou o padaço mais lindo da nossa história de amor, mas desde o momento em que te conheci, a minha vida ganhou um brilho diferente.'
 const ourMoments: Moment[] = [
   {
     date: "15/07/2023 - 15/07/2024",
     message: textoInicial,
-    image: "", // Sem imagem para o primeiro slide
+    image: "", 
   },
   {
     date: "01/07/2024",
@@ -52,55 +50,69 @@ const ourMoments: Moment[] = [
   },
   {
     date: "01/08/2023",
-    message: "a gente da beijinho",
+    message: "a gente da beijinho,",
     image: primeiroBeijo,
   },
   {
     date: "15/07/2023",
-    message: "vc me chama pra passear no mercado novo ",
+    message: "a gente vai passear, ",
     image: primeiroDate,
   },
   {
     date: "20/07/2023", 
-    message: "a gente vai pra casa um do outro",
+    message: "a gente vai pra casa um do outro,",
     image: suaCasa,
   },
     {
     date: "20/08/2023",
-    message: "e tira fotos lindas juntos",
+    message: "e tira fotos lindas juntos!",
     image: fofos,
   },
   {
     date: "25/07/2023",
-    message: "a gente faz coisas divertidas",
+    message: "a gente faz coisas divertidas,",
     image: primeiraVez,
   },
   
   {
     date: "15/08/2023",
-    message: "e vive momentos importantes juntos",
+    message: "e vive momentos importantes juntos!!!!",
     image: meioMedico,
   },
   
   {
     date: "01/09/2023",
-    message: "passear com você é tão legal",
+    message: "passear com você é tão legal!",
     image: mercadoNovo,
   },
   {
     date: "10/09/2023",
-    message: "ficar deitadinhos juntos sem fazer nada é uma das coisas favoritas do mundo",
+    message: "e ficar deitadinhos juntos sem fazer nada é uma das minhas coisas favoritas do mundo",
     image: deitadinhos,
   },
   {
     date: "15/09/2023", 
-    message: "tudo isso porque é tudo com você",
+    message: "e tudo é legal porque é tudo com você!!",
     image: aniverAlicia,
+  },  
+  {
+    date: "15/06/2024",
+    message: "você me apresentou as pessoas mais importantes da sua vida,",
+    image: casamento,
+  },  {
+    date: "15/06/2024",
+    message: "e a gente sempre vive momentos lindos junto com todas elas,",
+    image: cridance,
   },
   {
     date: "20/09/2023",
-    message: "só passar um momento com você já torna o meu dia muito e muito mais especial",
+    message: "passar só um momentinho com você já torna o meu dia muito e muito mais especial!!",
     image: ligacaoComVc ,
+  },
+  {
+    date: "20/09/2023",
+    message: "pra sempre as quartas vão me lembrar dos nossos almocinhos especiais, que me dão força para a semana!",
+    image: quarta ,
   },
   {
     date: "01/10/2023",
@@ -109,59 +121,54 @@ const ourMoments: Moment[] = [
   },
   {
     date: "01/04/2024",
-    message: "viajar juntos",
+    message: "viajar juntos,",
     image: viagemLavras,
   },
   {
     date: "05/04/2024",
-    message: "tirar fotos lindas",
+    message: "tirar fotos lindas,",
     image: lavras,
   },
   {
     date: "01/01/2024",
-    message: "começar o ano juntos",
+    message: "começar o ano juntos,",
     image: anoNovo2,
   },
   {
     date: "10/02/2024",
-    message: "e viver o carnaval",
+    message: "e viver o carnaval,",
     image: carnaval,
   },
   {
     date: "12/02/2024",
-    message: "e da mais beijos no carnaval",
+    message: "dar mais beijos no carnaval,",
     image: carnaval2,
   },
   {
     date: "13/02/2024",
-    message: "e se divertir juntos",
+    message: "e se divertir juntos!",
     image: carnaval3,
   },
   {
     date: "14/02/2024",
-    message: "se fantasiar juntos",
+    message: "se fantasiar juntos,",
     image: carnaval4,
   },
   {
     date: "15/03/2024",
-    message: "treinar juntinhos ",
+    message: "treinar juntinhos,",
     image: academia,
   },
   
   {
     date: "01/06/2024",
-    message: "brincar com a fly",
+    message: "e brincar com a fly!!!",
     image: fly,
   },
   {
     date: "15/04/2024",
-    message: "você me leva nos lugares mais legais",
+    message: "você me leva nos lugares mais legais,",
     image: sitio,
-  },
-  {
-    date: "15/06/2024",
-    message: "me apresenta as pessoas importantes da sua vida",
-    image: casamento,
   },
   {
     date: "15/05/2024",
@@ -277,9 +284,17 @@ export default function TimelineCarousel() {
           >
             ← 
           </button>
-          <span style={styles.counter}>
+          <button 
+            style={{
+              ...styles.button,
+              backgroundColor: "#ff6b6b",
+              fontSize: "1.5em"
+            }}
+            onClick={() => setCurrentIndex(0)}
+            aria-label="Voltar para a primeira foto"
+          >
             ❤️
-          </span>
+          </button>
           <button 
             style={{
               ...styles.button,
